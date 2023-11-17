@@ -3,17 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rack Games</title>
     <link rel="stylesheet" href="../public/stylesheet.css">
-    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+    <link rel="icon" href="/public/favicon.ico">
 </head>
 <body>
 <br>
-<div id="barra">
+<div id="barra" class=""><!-- .barra-escondida -->
     <div class="elemento-barra no-borde"><a href="/" id="enlace-principal"><img class="imgG3" src="public/LogoPng8.png" alt="Rack Games">Rack Games</a></div>
     <div class="elemento-barra"><a href="/contacts" class="minilink">Contacts</a></div><!-- .minilink-activado -->
     <div class="elemento-barra"><a href="/about" class="minilink">About</a></div>
     <div class="elemento-barra"><a href="/games" class="minilink">Games</a></div>
-    <div class="elemento-barra"><a href="#" class="minilink">&larr;\</a></div>
+    <div class="elemento-barra"><a href="/morestuff" class="minilink">More stuff</a></div>
+    <div class="elemento-barra"><a href="#" class="minilink" id="esconder-barra">&larr;\</a></div>
 </div>
+<script>
+    document.querySelector("title").innerHTML = "Rack Games - " + window.location.pathname;
+
+    //funcionamiento barra
+    if(localStorage.getItem("no-barra") == 1){
+        document.getElementById("barra").classList.add("barra-escondida");
+        document.getElementById("esconder-barra").innerHTML = "&rarr;\\";
+    } else {
+        document.getElementById("barra").classList.remove("barra-escondida");
+        document.getElementById("esconder-barra").innerHTML = "&larr;\\";
+    }
+    document.getElementById("esconder-barra").addEventListener("click", (e) => {
+        e.preventDefault();
+        if(localStorage.getItem("no-barra") == 0){
+            localStorage.setItem("no-barra", 1);
+            document.getElementById("esconder-barra").innerHTML = "&rarr;\\";
+            document.getElementById("barra").classList.add("barra-escondida");
+        } else {
+            localStorage.setItem("no-barra", 0);
+            document.getElementById("esconder-barra").innerHTML = "&larr;\\";
+            document.getElementById("barra").classList.remove("barra-escondida");
+        }
+    });
+</script>
 <br><br><br><br><br><br>

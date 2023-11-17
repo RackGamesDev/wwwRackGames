@@ -1,3 +1,6 @@
+:root{
+    --tamagno-barra: -680px;
+}
 body{
     background-color: black;
     color: white;
@@ -11,14 +14,22 @@ a{
     color: white;
 }
 
+
 #barra{
     border: 2px solid white;
     padding: 0;
     margin: auto;
     align-items: center;
     transform: translate(-20px,0);
-    position: fixed;
     background-color: black;
+    position: fixed;
+
+    left: -10;
+    transition: position 1s;
+}
+.barra-escondida{
+    position:absolute;
+    left: var(--tamagno-barra);
 }
 .elemento-barra{
     display: inline-block;
@@ -33,11 +44,9 @@ a{
 }
 
 
-
 .imgG3{
-    size: 64px;
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
     image-rendering: pixelated;
 }
 .minilink{
@@ -55,9 +64,6 @@ a{
 }
 .no-borde{
     border: none;
-}
-#texto-enlace-principal{
-    transform: translateY(-20);
 }
 #enlace-principal{
     display: inline;

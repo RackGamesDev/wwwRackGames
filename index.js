@@ -43,24 +43,31 @@ app.get('/public/LogoPng8.png', (req, res) => {
     const stringified = readFileSync(file);
     res.end(stringified);
 });
+app.get('/public/favicon.ico', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'favicon.ico');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
 
 
 
 
 
 
-
-app.get("/", (req, res) => {//inicio
+app.get("/", (req, res) => {
     res.send(formarPagina('index.html'));
 });
-app.get("/contacts", (req, res) => {//inicio
+app.get("/contacts", (req, res) => {
     res.send(formarPagina('contacts.html'));
 });
-app.get("/games", (req, res) => {//inicio
+app.get("/games", (req, res) => {
     res.send(formarPagina('games.html'));
 });
-app.get("/about", (req, res) => {//inicio
+app.get("/about", (req, res) => {
     res.send(formarPagina('about.html'));
+});
+app.get("/morestuff", (req, res) => {
+    res.send(formarPagina('morestuff.html'));
 });
 
 
