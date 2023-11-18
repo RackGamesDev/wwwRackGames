@@ -6,6 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    err404
+    <img style="width: 512px; height: 256px" src="../public/err404pao.png" alt="404"><br>
+    <p id="texto-error">
+        
+    </p>
+    <p>
+        <a href="/">Let us bring you home!</a>
+    </p>
+    <script>
+        document.getElementById("texto-error").innerHTML = "You are in a weird place, " + window.location.pathname + " seems not to exist...";
+    </script>
 </body>
 </html>

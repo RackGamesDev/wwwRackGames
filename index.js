@@ -43,6 +43,21 @@ app.get('/public/LogoPng8.png', (req, res) => {
     const stringified = readFileSync(file);
     res.end(stringified);
 });
+app.get('/public/LogoGrandeO.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'LogoGrandeO.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/pao128.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'pao128.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/err404pao.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'err404pao.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
 app.get('/public/favicon.ico', (req, res) => {
     const file = path.join(process.cwd(), 'public', 'favicon.ico');
     const stringified = readFileSync(file);

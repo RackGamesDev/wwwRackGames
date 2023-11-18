@@ -5,11 +5,13 @@ body{
     background-color: black;
     color: white;
     font-family:'Courier New', Courier, monospace;
+    
     min-height: 100vh;
 }
 img{
     margin: 0;
     padding: 0;
+    image-rendering: pixelated;
 }
 a{
     color: white;
@@ -21,8 +23,24 @@ footer{
     position: relative;
     left: -10px;
 }
+h1,h2,h3,h4,h5,h6{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px;
+}
+li>*{
+    font-size: 1.7rem;
+}
+p{
+    font-size: 1.2rem;
+    padding: 10px;
+}
 
 
+#img-footer{
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+}
 #barra{
     border: 2px solid white;
     padding: 0;
@@ -51,6 +69,23 @@ footer{
     width: 100%;
     position: fixed;
 }
+
+
+
+#logo-principal{
+    width: 50vw;
+    height: 100%;
+}
+.entrada-lista:hover{
+    font-weight: bolder;
+}
+
+
+
+
+
+
+
 
 
 
@@ -91,7 +126,6 @@ footer{
 .solo-grande{
     display: inline;
 }
-
 
 @media (max-width: 782px){
     #mas-barra{
