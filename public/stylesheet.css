@@ -1,10 +1,11 @@
 :root{
-    --tamagno-barra: -680px;
+    --tamagno-barra: -700px;
 }
 body{
     background-color: black;
     color: white;
     font-family:'Courier New', Courier, monospace;
+    min-height: 100vh;
 }
 img{
     margin: 0;
@@ -13,22 +14,26 @@ img{
 a{
     color: white;
 }
+footer{
+    width: 105%;
+    border-top: 1px solid white;
+    padding-left: 10px;
+    position: relative;
+    left: -10px;
+}
 
 
 #barra{
     border: 2px solid white;
     padding: 0;
     margin: auto;
-    align-items: center;
     transform: translate(-20px,0);
     background-color: black;
-    position: fixed;
-
+    position: absolute;
+    transition: left 1s;
     left: -10;
-    transition: position 1s;
 }
 .barra-escondida{
-    position:absolute;
     left: var(--tamagno-barra);
 }
 .elemento-barra{
@@ -42,6 +47,11 @@ a{
     text-align: center;
     line-height: 2.6rem;
 }
+#mas-barra{
+    width: 100%;
+    position: fixed;
+}
+
 
 
 .imgG3{
@@ -62,6 +72,9 @@ a{
     background-color: white;
     color: black;
 }
+.minilink-activado>a{
+    color: black;
+}
 .no-borde{
     border: none;
 }
@@ -72,8 +85,48 @@ a{
 .invisible{
     display: none;
 }
+.solo-peque{
+    display: none;
+}
+.solo-grande{
+    display: inline;
+}
 
 
 @media (max-width: 782px){
-    
+    #mas-barra{
+        position: block;
+    }
+    #barra{
+        border: 2px solid white;
+        background-color: black;
+        position: block;
+        width: 105%;
+        text-align: center;
+    }
+    .elemento-barra{
+        display: inline-block;
+        border: 1px solid white;
+        font-size: 1.3rem;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+        line-height: 2.6rem;
+        margin-bottom: 5px;
+    }
+    .barra-escondida{
+        left: 0;
+    }
+    #enlace-principal{
+        display: inline;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    .solo-peque{
+        display: inline;
+    }
+    .solo-grande{
+        display: none;
+    }
 }

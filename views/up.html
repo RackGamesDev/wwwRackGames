@@ -9,36 +9,55 @@
 </head>
 <body>
 <br>
-<div id="barra" class=""><!-- .barra-escondida -->
-    <div class="elemento-barra no-borde"><a href="/" id="enlace-principal"><img class="imgG3" src="public/LogoPng8.png" alt="Rack Games">Rack Games</a></div>
-    <div class="elemento-barra"><a href="/contacts" class="minilink">Contacts</a></div><!-- .minilink-activado -->
-    <div class="elemento-barra"><a href="/about" class="minilink">About</a></div>
-    <div class="elemento-barra"><a href="/games" class="minilink">Games</a></div>
-    <div class="elemento-barra"><a href="/morestuff" class="minilink">More stuff</a></div>
-    <div class="elemento-barra"><a href="#" class="minilink" id="esconder-barra">&larr;\</a></div>
+<div id="mas-barra">
+    <div id="barra" class=""><!-- .barra-escondida --><br class="solo-peque">
+        <div class="elemento-barra no-borde"><a href="/" id="enlace-principal"><img class="imgG3" src="public/LogoPng8.png" alt="Rack Games">Rack Games</a></div><br class="solo-peque"><br class="solo-peque">
+        <div class="elemento-barra" id="el-barra-1"><a href="/contacts" class="minilink">Contacts</a></div><!-- .minilink-activado -->
+        <div class="elemento-barra" id="el-barra-2"><a href="/about" class="minilink">About</a></div>
+        <div class="elemento-barra" id="el-barra-3"><a href="/games" class="minilink">Games</a></div>
+        <div class="elemento-barra" id="el-barra-4"><a href="/morestuff" class="minilink">More stuff</a></div>
+        <div class="elemento-barra solo-grande"><a href="#" class="minilink" id="esconder-barra">&larr;\</a></div>
+    </div>
 </div>
 <script>
-    document.querySelector("title").innerHTML = "Rack Games - " + window.location.pathname;
-
-    //funcionamiento barra
-    if(localStorage.getItem("no-barra") == 1){
-        document.getElementById("barra").classList.add("barra-escondida");
-        document.getElementById("esconder-barra").innerHTML = "&rarr;\\";
-    } else {
-        document.getElementById("barra").classList.remove("barra-escondida");
-        document.getElementById("esconder-barra").innerHTML = "&larr;\\";
-    }
-    document.getElementById("esconder-barra").addEventListener("click", (e) => {
-        e.preventDefault();
-        if(localStorage.getItem("no-barra") == 0){
-            localStorage.setItem("no-barra", 1);
-            document.getElementById("esconder-barra").innerHTML = "&rarr;\\";
-            document.getElementById("barra").classList.add("barra-escondida");
-        } else {
-            localStorage.setItem("no-barra", 0);
-            document.getElementById("esconder-barra").innerHTML = "&larr;\\";
-            document.getElementById("barra").classList.remove("barra-escondida");
+    document.addEventListener("DOMContentLoaded", (e) => {
+        document.querySelector("title").innerHTML = "Rack Games - " + window.location.pathname;
+        if(window.location.pathname == "/contacts"){
+            document.getElementById("el-barra-1").classList.add("minilink-activado");
         }
+        if(window.location.pathname == "/about"){
+            document.getElementById("el-barra-2").classList.add("minilink-activado");
+        }
+        if(window.location.pathname == "/games"){
+            document.getElementById("el-barra-3").classList.add("minilink-activado");
+        }
+        if(window.location.pathname == "/morestuff"){
+            document.getElementById("el-barra-4").classList.add("minilink-activado");
+        }
+
+        //funcionamiento barra
+        if(localStorage.getItem("no-barra") == 1){
+            document.getElementById("barra").classList.add("barra-escondida");
+            document.getElementById("esconder-barra").innerHTML = "&rarr;\\";
+        } else {
+            document.getElementById("barra").classList.remove("barra-escondida");
+            document.getElementById("esconder-barra").innerHTML = "&larr;\\";
+        }
+        document.getElementById("esconder-barra").addEventListener("click", (e) => {
+            e.preventDefault();
+            if(localStorage.getItem("no-barra") == 0){
+                localStorage.setItem("no-barra", 1);
+                document.getElementById("esconder-barra").innerHTML = "&rarr;\\";
+                document.getElementById("barra").classList.add("barra-escondida");
+            } else {
+                localStorage.setItem("no-barra", 0);
+                document.getElementById("esconder-barra").innerHTML = "&larr;\\";
+                document.getElementById("barra").classList.remove("barra-escondida");
+            }
+        });
     });
 </script>
 <br><br><br><br><br><br>
+<div class="solo-peque">
+    <br><br><br><br><br><br>
+</div>
