@@ -63,6 +63,36 @@ app.get('/public/favicon.ico', (req, res) => {
     const stringified = readFileSync(file);
     res.end(stringified);
 });
+app.get('/public/logos/DiscordL.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'logos', 'DiscordL.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/logos/GamejoltL.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'logos', 'GamejoltL.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/logos/GithubL.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'logos', 'GithubL.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/logos/ItchioL.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'logos', 'ItchioL.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/logos/SteamL.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'logos', 'SteamL.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/logos/YoutubeL.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'logos', 'YoutubeL.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
 
 
 
