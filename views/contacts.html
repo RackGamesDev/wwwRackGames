@@ -1,14 +1,27 @@
 <h1>Contacts = {</h1>
-<p style="margin-left: 20px;">_GITHUB="<a class="entrada-lista" href="https://github.com/RackGamesDev">RackGamesDev</a>";</p><img src="../public/logos/GithubL.png" alt="">
-<p style="margin-left: 20px;">_GAMEJOLT="<a class="entrada-lista" href="https://gamejolt.com/@Rack-Games">@Rack-Games</a>";</p>
-<p style="margin-left: 20px;">_ITCHIO="<a class="entrada-lista" href="https://rack-games.itch.io">rack-games</a>";</p>
-<p style="margin-left: 20px;">_YOUTUBE="<a class="entrada-lista" href="https://www.youtube.com/@rackgames">@rackgames</a>";</p>
-<p style="margin-left: 20px;">_DISCORD="_yester.";</p>
-<p style="margin-left: 20px;">_STEAM="[not_yet].";</p>
-<p style="margin-left: 20px;">_OFFICIAL_WEBSITE="<a class="entrada-lista" href="/">rackgames.vercel.app</a>";</p>
+<div class="entrada-contacto invisible" id="entrada-contacto-1"><img src="../public/logos/GithubL.png" alt=""><p style="margin-left: 10px;">_GITHUB="<a class="entrada-lista" href="https://github.com/RackGamesDev">RackGamesDev</a>";</p></div>
+<div class="entrada-contacto invisible" id="entrada-contacto-2"><img src="../public/logos/GamejoltL.png" alt=""><p style="margin-left: 10px;">_GAMEJOLT="<a class="entrada-lista" href="https://gamejolt.com/@Rack-Games">@Rack-Games</a>";</p></div></div>
+<div class="entrada-contacto invisible" id="entrada-contacto-3"><img src="../public/logos/ItchioL.png" alt=""><p style="margin-left: 10px;">_ITCHIO="<a class="entrada-lista" href="https://rack-games.itch.io">rack-games</a>";</p></div></div>
+<div class="entrada-contacto invisible" id="entrada-contacto-4"><img src="../public/logos/YoutubeL.png" alt=""><p style="margin-left: 10px;">_YOUTUBE="<a class="entrada-lista" href="https://www.youtube.com/@rackgames">@rackgames</a>";</p></div></div>
+<div class="entrada-contacto invisible" id="entrada-contacto-5"><img src="../public/logos/DiscordL.png" alt=""><p style="margin-left: 10px;">_DISCORD="_yester.";</p></div></div>
+<div class="entrada-contacto invisible" id="entrada-contacto-6"><img src="../public/logos/SteamL.png" alt=""><p style="margin-left: 10px;">_STEAM="[not_yet].";</p></div></div>
+<div class="entrada-contacto invisible" id="entrada-contacto-7"></div><p style="margin-left: 10px;">_OFFICIAL_WEBSITE="<a class="entrada-lista" href="/">rackgames.vercel.app</a>";</p></div>
 <h1>}</h1><br>
-<h1>Info = {</h1>
-<p style="margin-left: 20px;">Contact as Yester or RackGamesDev for anything</p>
-<h1>}</h1><br>
+<div id="entrada-contacto-8" class="invisible">
+    <h1>Info = {</h1>
+    <p style="margin-left: 20px;">Contact as "Yester//RackGamesDev//hiiiiii :3" for anything</p>
+    <h1>}</h1><br>
+</div>
 
-PONER IMAGENES Y ANIMACION
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        let puestas = 1;
+        let inter = setInterval(()=>{
+            document.getElementById("entrada-contacto-" + puestas).classList.remove("invisible");
+            puestas++;
+            if(puestas === 9){
+                clearInterval(inter);
+            }
+        }, 50);
+    });
+</script>

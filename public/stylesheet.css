@@ -50,6 +50,7 @@ p{
     position: absolute;
     transition: left 1s;
     left: -10;
+    z-index: 999;
 }
 .barra-escondida{
     left: var(--tamagno-barra);
@@ -83,7 +84,18 @@ p{
     font-weight: bolder;
     box-shadow: 0px 0px 30px white;
 }
-
+.entrada-contacto>*{
+    display: inline-block;
+}
+.entrada-contacto>img{
+    width: 25px;
+    height: 25px;
+    margin-left: 35px;
+    display: inline-block;
+    transform: translate(0, 5px);
+    z-index: -1;
+    position:sticky;
+}
 
 
 
@@ -95,6 +107,7 @@ p{
     width: 54px;
     height: 54px;
     image-rendering: pixelated;
+    z-index: -1;
 }
 .minilink{
     text-decoration: none;
