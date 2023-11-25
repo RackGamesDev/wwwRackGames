@@ -93,6 +93,46 @@ app.get('/public/logos/YoutubeL.png', (req, res) => {
     const stringified = readFileSync(file);
     res.end(stringified);
 });
+app.get('/public/portadas-cuadro/changertone.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'portadas-cuadro', 'changertone.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/portadas-cuadro/hectikal.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'portadas-cuadro', 'hectikal.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/portadas-cuadro/ippg.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'portadas-cuadro', 'ippg.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/portadas-cuadro/ippg2.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'portadas-cuadro', 'ippg2.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/portadas-cuadro/juegocuadraos.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'portadas-cuadro', 'juegocuadraos.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/portadas-cuadro/pairedsteps.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'portadas-cuadro', 'pairedsteps.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/portadas-cuadro/plaixits.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'portadas-cuadro', 'plaixits.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
+app.get('/public/portadas-cuadro/spritznaya.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'portadas-cuadro', 'spritznaya.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
 
 
 
@@ -113,6 +153,31 @@ app.get("/about", (req, res) => {
 });
 app.get("/morestuff", (req, res) => {
     res.send(formarPagina('morestuff.html'));
+});
+
+app.get("/games/changertone", (req, res) => {
+    res.send(formarPagina('games/changertone.html'));
+});
+app.get("/games/hectikal", (req, res) => {
+    res.send(formarPagina('games/hectikal.html'));
+});
+app.get("/games/ippg", (req, res) => {
+    res.send(formarPagina('games/ippg.html'));
+});
+app.get("/games/ippg2", (req, res) => {
+    res.send(formarPagina('games/ippg2.html'));
+});
+app.get("/games/juegocuadraos", (req, res) => {
+    res.send(formarPagina('games/juegocuadraos.html'));
+});
+app.get("/games/pairedsteps", (req, res) => {
+    res.send(formarPagina('games/pairedsteps.html'));
+});
+app.get("/games/plaixits", (req, res) => {
+    res.send(formarPagina('games/plaixits.html'));
+});
+app.get("/games/spritznaya", (req, res) => {
+    res.send(formarPagina('games/spritznaya.html'));
 });
 
 

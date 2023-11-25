@@ -98,6 +98,39 @@ p{
 }
 
 
+#contenedor-juegos{
+    width: 80%;
+    margin: 10px;
+    text-align: center;
+}
+.cuadrado-juego{
+    margin: 10px;
+    border: 2px solid white;
+    width: 300px;
+    height: 400px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 40px;
+    height: 500px;
+}
+.cuadrado-juego>p{
+    font-size: 1rem;
+}
+.cuadrado-juego>a{
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+    display: inline-block;
+    width: 80%;
+    padding: 0;
+}
+.cuadrado-juego>a:hover{
+    color: white;
+    background-color: black;
+}
+
+
 
 
 
