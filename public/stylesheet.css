@@ -107,7 +107,7 @@ p{
     margin: 10px;
     border: 2px solid white;
     width: 300px;
-    height: 400px;
+    height: 720px;
     display: inline-block;
     text-align: center;
     margin-bottom: 40px;
@@ -116,16 +116,35 @@ p{
 .cuadrado-juego>p{
     font-size: 1rem;
 }
-.cuadrado-juego>a{
+.cuadrado-juego>p{
+    height: 100px;
+}
+.titulo-cuadro-juego{
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+    height: 10px;
+    transform: translate(0,-36px);
+    font-weight: bolder;   
+}
+.enlaces-cuadro-juego{
+    display: inline-block;
+    height: 30px;
+}
+.enlaces-cuadro-juego>a{
     text-decoration: none;
     color: black;
     background-color: white;
     border: 1px solid white;
+    border-bottom: none;
     display: inline-block;
-    width: 80%;
+    width: 100px;
     padding: 0;
+    margin: 1px;
+    font-size: 0.8rem;
+    
 }
-.cuadrado-juego>a:hover{
+.enlaces-cuadro-juego>a:hover{
     color: white;
     background-color: black;
 }
@@ -133,9 +152,13 @@ p{
 
 
 
-
-
-
+.tapar-juego{
+    z-index: 999;
+    background-color: black;
+    position: absolute;
+    width: 300px;
+    height: 500px;
+}
 .imgG3{
     width: 54px;
     height: 54px;

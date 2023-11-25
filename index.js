@@ -155,31 +155,6 @@ app.get("/morestuff", (req, res) => {
     res.send(formarPagina('morestuff.html'));
 });
 
-app.get("/games/changertone", (req, res) => {
-    res.send(formarPagina('games/changertone.html'));
-});
-app.get("/games/hectikal", (req, res) => {
-    res.send(formarPagina('games/hectikal.html'));
-});
-app.get("/games/ippg", (req, res) => {
-    res.send(formarPagina('games/ippg.html'));
-});
-app.get("/games/ippg2", (req, res) => {
-    res.send(formarPagina('games/ippg2.html'));
-});
-app.get("/games/juegocuadraos", (req, res) => {
-    res.send(formarPagina('games/juegocuadraos.html'));
-});
-app.get("/games/pairedsteps", (req, res) => {
-    res.send(formarPagina('games/pairedsteps.html'));
-});
-app.get("/games/plaixits", (req, res) => {
-    res.send(formarPagina('games/plaixits.html'));
-});
-app.get("/games/spritznaya", (req, res) => {
-    res.send(formarPagina('games/spritznaya.html'));
-});
-
 
 
 
