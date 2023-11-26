@@ -1,3 +1,53 @@
-<div>
-    
+<div id="entrada-stuff-1" class="invisible">
+    <h1><img class="img-entrada-stuff" src="../public/logos/YoutubeL.png" alt="">Music = {</h1>
+        <div class="contenido-stuff">
+            <p>Random music and Sountracks on Youtube</p>
+            <p><a href="https://www.youtube.com/@rackgames" target="_blank">@rackgames</a></p>
+        </div>
+        <h1>}</h1>
+        <br>
 </div>
+<div id="entrada-stuff-2" class="invisible">
+    <h1><img class="img-entrada-stuff" src="../public/logos/GithubL.png" alt="">Scripts = {</h1>
+        <div class="contenido-stuff">
+            <p>Some scripting reference on Github</p>
+            <p><a href="https://github.com/RackGamesDev" target="_blank">RackGamesDev</a></p>
+        </div>
+        <h1>}</h1>
+        <br>
+</div>
+<div id="entrada-stuff-3" class="invisible">
+    <h1><img class="img-entrada-stuff" src="../public/AnarchatLogo.png" alt="">Anarchat = {</h1>
+        <div class="contenido-stuff">
+            <p>Anarchat was fully developed by Rack Games</p>
+            <p><a href="http://anarchat.vercel.app" target="_blank">http://anarchat.vercel.app</a></p>
+        </div>
+        <h1>}</h1>
+        <br>
+</div>
+<div id="entrada-stuff-4" class="invisible">
+    <h1>Info = {</h1>
+        <div class="contenido-stuff">
+            <p>This website is hosted by Vercel working with NodeJS and ExpressJS</p>
+        </div>
+        <h1>}</h1>
+        <br>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        let puestas = 1;
+        let inter = setInterval(()=>{
+            document.getElementById("entrada-stuff-" + puestas).classList.remove("invisible");
+            puestas++;
+            if(puestas === 5){
+                clearInterval(inter);
+            }
+        }, 70);
+    });
+    document.addEventListener("keydown", (e) => {
+        if(e.code = "KeyS"){
+            window.location.href = "/s";
+        }
+    });
+</script>

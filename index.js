@@ -63,6 +63,11 @@ app.get('/public/favicon.ico', (req, res) => {
     const stringified = readFileSync(file);
     res.end(stringified);
 });
+app.get('/public/AnarchatLogo.png', (req, res) => {
+    const file = path.join(process.cwd(), 'public', 'AnarchatLogo.png');
+    const stringified = readFileSync(file);
+    res.end(stringified);
+});
 app.get('/public/logos/DiscordL.png', (req, res) => {
     const file = path.join(process.cwd(), 'public', 'logos', 'DiscordL.png');
     const stringified = readFileSync(file);
@@ -153,6 +158,9 @@ app.get("/about", (req, res) => {
 });
 app.get("/morestuff", (req, res) => {
     res.send(formarPagina('morestuff.html'));
+});
+app.get("/s", (req, res) => {
+    res.send(formarPagina('s.html'));
 });
 
 
