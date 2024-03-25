@@ -30,8 +30,11 @@ const formarPagina = (pagina) => {//devuelve una pagina entera, juntando la cabe
 
 app.get('/public/stylesheet.css', (req, res) => {
     const file = path.join(process.cwd(), 'public', 'stylesheet.css');
-    const stringified = readFileSync(file, 'utf8');
-    res.end(stringified);
+    //const stringified = readFileSync(file, 'utf8');
+    //res.end(stringified);
+    res.setHeader('Content-type', 'text/css');
+    res.write(readFileSync(file));
+    res.end();
 });
 app.get('/public/RackWrite-Regular.ttf', (req, res) => {
     const file = path.join(process.cwd(), 'public', 'RackWrite-Regular.ttf');
